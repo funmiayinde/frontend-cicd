@@ -3,7 +3,7 @@ services:
     - docker
 
 before_build:
-  - docker build -t frontend-cicd -f Dockerfile.dev
+  - docker build -t frontend-cicd -f Dockerfile.dev .
 
 
 script:
