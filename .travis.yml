@@ -1,0 +1,10 @@
+sudo: required
+services:
+    -docker
+
+before_build:
+  - docker build -t frontend-cicd -f Dockerfile.dev
+
+
+script:
+  - docker run frontend-cicd npm run test -- --coverage
